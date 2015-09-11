@@ -16,9 +16,9 @@ _The user feeds in a string, a word they'd like to replace, and the replacement 
 
 ## Technologies Used
 
-* _JQuery 1.11.3_
-* _Chai_
-* _Mocha_
+* JQuery 1.11.3
+* Chai
+* Mocha
 
 ### Legal
 
