@@ -1,5 +1,10 @@
 var findAndReplace = function(phrase, wordToFind, replacementWord) {
-  return phrase.replace(wordToFind, replacementWord);
+  if(phrase.split(" ")[0] === wordToFind){
+    phrase = phrase.split(" ");
+    phrase[0] = replacementWord;
+    phrase = phrase.join(" ");
+  }
+  return phrase.replace(new RegExp(" " + wordToFind, 'g'), " " + replacementWord);
 }
 
 $(function() {
@@ -8,6 +13,7 @@ $(function() {
     var wordToFind = $("input#wordToFind").val();
     var replacementWord = $("input#replacementWord").val();
     var result = findAndReplace(phrase, wordToFind, replacementWord);
+    debugger;
     $(".resultingString").text(result);
 
     $("#result").show();
